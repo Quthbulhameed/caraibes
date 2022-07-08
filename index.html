@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="https://unpkg.com/bootstrap/dist/css/bootstrap.min.css"/>
+    <link type="text/css" rel="stylesheet" href="https://unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="https://unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <title>Chambre Amor</title>
+</head>
+<body>
+
+<div id="app">
+    <b-container>
+        <div class="container">
+            <div class="form-group">
+                <label for="exampleInputId1">Id de la chambre :</label>
+                <input v-model="id" name="id" class="form-control" id="exampleInputId1" placeholder="Enter ID">
+            </div>
+            <b-btn variant="primary" v-on:click="ajax(id)">Valider</b-btn>
+
+            <h2>Voici la chambre choisi : </h2>
+            <p>Id : {{ id }}</p>
+            <p>Nombre de couchage : {{ nbcouchage }}</p>
+            <p>Porte : {{ porte }}</p>
+            <p>Etage : {{ etage }}</p>
+            <p>Id Categorie : {{ idcategorie }}</p>
+            <p>Baignoire : {{ baignoire }}</p>
+            <p>Prix de base : {{ prixbase }}</p>
+
+        </div>
+    </b-container>
+</div>
+<script src="vue.js"></script>
+</body>
+</html>
